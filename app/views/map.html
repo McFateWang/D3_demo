@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+  <style>
+    circle {
+      fill: orange;
+      stroke: black;
+      stroke-width: 0.7;
+      opacity: 0.7;
+    }
+
+    h2 {
+      text-align: center;
+      color: black;
+    }
+
+    div.years_buttons {
+      position: fixed;
+      top: 5px;
+      left: 50px;
+    }
+
+    div.years_buttons div {
+      background-color: rgb(251, 201, 127);
+      padding: 3px;
+      margin: 7px;
+    }
+  </style>
+  <script type="text/javascript">  
+    /*
+      函数作用：新建svg和map，引入地理数据
+    */
+    function draw(geo_data) {
+      /***************
+        PART1 - 参数设置，创建画布
+      **************/
+
+      "use strict";
+      //设置画布大小
+      var margin = 75,
+          width = 1400 - margin,
+          height = 600 - margin;
+      //设置h2标题
+      d3.select("body")
+        .append("h2")
+        .text("World Cup ");
+      //设置画布svg，添加group，其class为map
+      var svg = d3.select("body")
+          .append("svg")
+          .attr("width", width + margin)
+          .attr("height", height + margin)
+          .append('g')
+          .attr('class', 'map');
+      //建立years数组，存储所有世界杯的年份YYYY
+      var years = [];  
+        for(var i = 1930; i < 2015; i += 4) {
+          if(i !== 1942 && i !== 1946) {
+            years.push(i);
+          };
+        }
+      
+      /***************
+        PART2 - 使用GeoJson，画出map
+      **************/
+
+      //设置mercator投影，缩放尺度为140,移动map中心为svg中心
+      var projection = d3.geo.mercator()
+                             .scale(140)
+                             .translate([width / 2, height / 1.2]);
+      //设置投影的路径函数（path是一个函数）
+      var path = d3.geo.path().projection(projection);
+      //在svg上添加map，数据绑定，设置外观
+      var map = svg.selectAll('path')
+                   .data(geo_data.features)
+                   .enter()
+                   .append('path')
+                   .attr('d', path)
+                   .style('fill', 'lightBlue')
+                   .style('stroke', 'black')
+                   .style('stroke-width', 0.5);
+      
+      /***************
+        PART3 - 使用Tsv，画出世界杯数据 
+          ----- 将数据预处理分组聚合，建立update函数
+      **************/
+
+      /*
+        函数作用：在map的基础上引入世界杯的数据
+      */
+      function plot_points(data) {
+        /*
+          函数作用：nest函数中rollup函数的聚合函数；
+          输入：leaves是同一年份的世界杯数据
+        */
+        function agg_year(leaves) {
+          //统计总观众人数sum
+          var total = d3.sum(leaves, function(d) {
+              return d['attendance'];
+          });
+          //将经纬度投影成为像素点coords=array[2]
+          var coords = leaves.map(function(d) {
+              return projection([+d.long, +d.lat]);
+          });
+          //中心横坐标为所有coords[0]的平均数mean
+          var center_x = d3.mean(coords, function(d) {
+              return d[0];
+          });
+          //中心纵坐标为所有coords[1]的平均数mean
+          var center_y = d3.mean(coords, function(d) {
+              return d[1];
+          });
+          //设置集合teams，现在为空，其中数据为非重复
+          var teams = d3.set();
+          //无返回值函数，将所有team名称引入到集合中
+          leaves.forEach(function(d) {
+              teams.add(d['team1']);
+              teams.add(d['team2']);
+          });
+          //输出：（对于某一年）总观众数，画圈的x画圈的y，所有参赛国家名称
+          return {
+            'attendance' : total,
+            'x' : center_x,
+            'y' : center_y,
+            'teams' : teams.values()
+          };
+        }
+        /*
+          函数作用：nest函数，key分组，rollup集合，entires传输数据
+          此处根据数据的date属性分组（转换成yearYYYY）
+          输出： 得到每一次世界杯：地理平均点，人数的总和，参赛国家名称
+        */         
+        var nested = d3.nest()
+                       .key(function(d) { //此处得到keys
+                          return d['date'].getUTCFullYear();
+                       })
+                       .rollup(agg_year) //此处得到values
+                       .entries(data);
+        //找到观赛人数的最大值max，作为映射函数的区间上限
+        var attendance_max = d3.max(nested, function(d) {
+            return d.values['attendance'];
+        });
+        //circle的半径设置为映射后的观赛人数开平方（这样人数和面积对应）
+        var radius = d3.scale.sqrt()
+                       .domain([0, attendance_max])
+                       .range([0, 15]);
+        //频繁出现的函数给其命名，返回数据的key属性（此处是nested的key->年份）
+        function key_func(d) {
+            return d['key'];
+        }
+        /*
+          添加group，class为bubble，数据绑定（其中，数据排序为总人数大的绘图顺序在前）
+        */
+        svg.append('g')
+           .attr("class", "bubble")
+           .selectAll("circle")
+           .data(nested.sort(function(a, b) { 
+              return b.values['attendance'] - a.values['attendance'];
+           }), key_func)
+           .enter()
+           .append("circle")
+           .attr('cx', function(d) { return d.values['x']; })
+           .attr('cy', function(d) { return d.values['y']; })
+           .attr('r', function(d) {
+                return radius(d.values['attendance']);
+           })
+        /*
+          函数作用：更新数据，仅剩下指定的年份；输入：指定的年份
+        */
+        function update(year) {
+          //过滤函数，遍历nested，筛选key属性（转换格式后）和给定year相同的数据
+          var filtered = nested.filter(function(d) {
+              return new Date(d['key']).getUTCFullYear() === year;
+          });
+          //将标题更改
+          d3.select("h2")
+            .text("World Cup " + year);
+
+          //选择 绑定了所有指定年份数据的 圆圈circle
+          var circles = svg.selectAll('circle')
+                           .data(filtered, key_func);
+          //删去剩下的exit
+          circles.exit().remove();
+          //绘制未出现的，设置的属性和之前绘制第一次时相同
+          circles.enter()
+                 .append("circle")
+                 .transition()
+                 .duration(500)
+                 .attr('cx', function(d) { return d.values['x']; })
+                 .attr('cy', function(d) { return d.values['y']; })
+                 .attr('r', function(d) {
+                    return radius(d.values['attendance']);
+                 });
+
+          //当前要显示的数据的所有国家名称
+          var countries = filtered[0].values['teams'];
+          /*
+            函数作用：更新国家，d指path元素绑定的json里的某个国家的边界线
+          */
+          function update_countries(d) {
+              if(countries.indexOf(d.properties.name) !== -1) {
+                  return "lightBlue";
+              } else {
+                  return 'white';
+              }
+          }
+          //对于所有path元素，更新其颜色
+          svg.selectAll('path')
+             .transition()
+             .duration(500)
+             .style('fill', update_countries)
+             .style('stroke', 'black');
+        }
+
+        /***************
+          PART4 - 使用Tsv，画出世界杯数据
+          ------- 生成动画，生成读者模式的按钮，增加按钮事件
+        **************/
+
+        /*
+          函数作用：设置动画时间，years数组是之前存储的年份，依次
+        */        
+        var year_idx = 0; //数组游标
+        var year_interval = setInterval(function() {
+          //更新该年份的数据
+          update(years[year_idx]);
+          year_idx++;
+          //逐个变化，一直到结尾停止
+          if(year_idx >= years.length) {
+            clearInterval(year_interval);
+            //在动画完成后，设置按钮用于读者模式，新建div，绑定years，按钮上写year
+            var buttons = d3.select("body")
+                    .append("div")
+                    .attr("class", "years_buttons")
+                    .selectAll("div")
+                    .data(years)
+                    .enter()
+                    .append("div")
+                    .text(function(d) {
+                        return d;
+                    });
+            //buttons的js事件函数，在click之时执行
+            buttons.on("click", function(d) {
+              //将所有按钮颜色重置
+              d3.select(".years_buttons")
+                .selectAll("div")
+                .transition()
+                .duration(500)
+                .style("color", "black")
+                .style("background", "rgb(251, 201, 127)");
+              //只将当前颜色的按钮颜色替换为蓝色
+              d3.select(this)
+                .transition()
+                .duration(500)
+                .style("background", "lightBlue")
+                .style("color", "white");
+              //更新地图，参数d是按钮的text是显示的年份
+              update(d);
+            });
+          }
+        }, 1000);//1000毫秒
+      }
+
+      /***************
+        PART5 - 使用Tsv，画出世界杯数据
+      **************/
+
+      var format = d3.time.format("%d-%m-%Y (%H:%M h)");
+      /*
+        函数作用：使用D3导入TSV文件，匿名函数处理
+      */  
+      d3.tsv("world_cup_geo.tsv", function(d) {
+        d['attendance'] = +d['attendance'];
+        d['date'] = format.parse(d['date']);
+        return d;
+      }, plot_points);
+
+    };
+  </script>
+</head>
+<body>
+  <script type="text/javascript">
+    /*
+      函数作用：使用D3导入GeoJSON文件
+    */   
+    d3.json("world_countries.json", draw);
+  </script>
+</body>
+</html>
