@@ -30,7 +30,12 @@ app.get('/index', function (req, res) {
 
 // 获取map页面
 app.get('/get_D3_map', function(req, res) {
-  res.sendFile( __dirname + "/views/map.html");
+  res.sendFile( __dirname + "/views/D3_map.html");
+})
+
+// 获取FDG页面
+app.get('/get_D3_fdg', function(req, res) {
+  res.sendFile( __dirname + "/views/D3_fdg.html");
 })
 
 // 用户登录后获取J2j界面

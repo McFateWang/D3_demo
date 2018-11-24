@@ -22,9 +22,11 @@ exports.load_mysql = function(req, res){
 	// 建立连接
 	connection.connect();
 	// 定义sql查询语句
-	var sql = 'select * from j2j_node';
+	var sql = 'select * from j2j_edge';
 	// 在连接中发起query语句，返回结果到数组rows中
 	// var data = {}; // 用于保存query返回的数据
+
+
 	connection.query(sql, function(err, result) {
 		if(err){
 			console.log('语句执行发生错误 - ', err.message);

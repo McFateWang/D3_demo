@@ -7,7 +7,7 @@ exports.check_user = function(req, res){
 	var user_name = req.query.user_name;
 	var user_pwd = req.query.user_pwd;
 	// 验证用户名和密码 正确则输出json数据
-	if(user_name == 'wang' && user_pwd == '123456') {
+	if(user_name === 'wang' && user_pwd === '123456') {
 		console.log('\n用户登录成功...');
 		console.log('登录用户名： ', user_name, '密码： ', user_pwd);
 		return true;

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8">
+	<script src="http://d3js.org/d3.v4.min.js"></script>
+	<title>期刊聚类的力导向图</title>
+	<!-- 自定义 CSS -->
+	<style>
+		h1 {
+			text-align: center;
+			color: black;
+		}
+		circle {
+			border: 5px solid black;
+		}
+	</style>
+	<!-- 自定义 D3 -->
+	<script>
+	function draw(json_data){
+		// 画布边界，大小，定位
+		var marge = {top:60,bottom:60,left:60,right:60};
+		var svg = d3.select("svg");
+		var width = svg.attr("width");
+		var height = svg.attr("height");
+		var g = svg.append("g")
+		.attr("transform","translate("+marge.top+","+marge.left+")");
+
+		// 节点集 和 边集
+		var nodes = json_data.nodes;
+		var edges = json_data.edges;
+		// 此处是因为MySQL中期刊从1开始，而默认的方法是从0开始的
+		// 其实就是按照数组存储的形式实现
+		for(var k in edges) {
+			edges[k].source = edges[k].source - 1;
+			edges[k].target = edges[k].target - 1;
+		}
+		
+		// 设置一个color的颜色比例尺，依据node的长度实现
+		var colorScale = d3.scaleOrdinal()
+		.domain(d3.range(nodes.length))
+		.range(d3.schemeCategory10);
+
+		// 新建力导向图，包括link（由边决定的牵引力）charge（不相连的排斥力） center（汇聚到中心的引力） 
+		var forceSimulation = d3.forceSimulation()
+		.force("link",d3.forceLink())
+		.force("charge",d3.forceManyBody().distanceMin(100).distanceMax(500))
+		.force("center",d3.forceCenter());;
+
+		// 绑定节点数据
+		forceSimulation.nodes(nodes)
+		.on("tick",ticked);// tick用来确定每一时刻的点的坐标
+		// 绑定边数据 -- link力
+		forceSimulation.force("link")
+		.links(edges)
+		.distance(function(d){
+		  //自定义 边的长度 边越短越紧密
+		  return  1 / d.value * 60 ;
+		})      
+
+		// 设置图形的中心位置 
+		forceSimulation.force("center")
+		.x(width/2)
+		.y(height/2);
+
+		// 绑定边数据，绘制边
+		var links = g.append("g")
+		.selectAll("line")
+		.data(edges)
+		.enter()
+		.append("line")
+		.attr("stroke",function(d,i){
+		  return colorScale(i);
+		})
+		.attr("stroke-width",1);
+		// 边上的文字
+		var linksText = g.append("g")
+		.selectAll("text")
+		.data(edges)
+		.enter()
+		.append("text")
+		.text(function(d){
+		  return d.relation;
+		})
+
+		// 节点拖动功能，绑定节点及其位置
+		var gs = g.selectAll(".circleText")
+		.data(nodes)
+		.enter()
+		.append("g")
+		.attr("transform",function(d,i){
+		  var cirX = d.x;
+		  var cirY = d.y;
+		  return "translate("+cirX+","+cirY+")";
+		})
+		.call(d3.drag()
+		  .on("start",started)
+		  .on("drag",dragged)
+		  .on("end",ended)
+		);
+
+		// 绘制节点元素
+		gs.append("circle")
+		.attr("r",10)
+		.attr("fill",function(d,i){
+			switch(d.j_label) {
+				case '数学': return 'red';
+				case '生物': return 'green';
+				case '计算机': return 'blue';
+				case '工程技术': return 'yellow';
+				default : return 'black'
+			}
+			//return colorScale(i);
+		})
+		.attr("stroke", 'black');
+		// 节点文字
+		gs.append("text")
+		.attr("x",-10)
+		.attr("y",-20)
+		.attr("dy",10)
+		.text(function(d){
+		  return d.j_label2;
+		})
+	
+		/*
+			以下是使用到的函数
+		*/
+
+		// ticked函数 描述各个元素的位置
+		function ticked() {
+			links 
+			.attr("x1",function(d){return d.source.x;})
+			.attr("y1",function(d){return d.source.y;})
+			.attr("x2",function(d){return d.target.x;})
+			.attr("y2",function(d){return d.target.y;});
+		  
+			linksText // 边上文本的位置
+			.attr("x",function(d){
+				return (d.source.x+d.target.x)/2;
+			})
+			.attr("y",function(d){
+				return (d.source.y+d.target.y)/2;
+			});
+			  
+			gs.attr("transform",function(d) { 
+				return "translate(" + d.x + "," + d.y + ")"; 
+			});
+		}
+
+		// 拖动节点的各个函数
+		function started(d){
+			if(!d3.event.active){
+			  forceSimulation.alphaTarget(0.8).restart();
+			}
+			d.fx = d.x;
+			d.fy = d.y;
+		}
+		//位置即是鼠标释放时的位置
+		function dragged(d){
+			d.fx = d3.event.x;
+			d.fy = d3.event.y;
+		}
+		function ended(d){
+			if(!d3.event.active){
+			  forceSimulation.alphaTarget(0);
+			}
+			d.fx = null;
+			d.fy = null;
+		}
+	}
+    </script>
+</head>
+<body>
+	<h1>期刊聚类示例</h1>
+	<svg width="1080" height="800"></svg>
+	<script>
+	    // 函数作用：使用D3导入JSON文件
+		d3.json("j2j.json", draw);
+	</script>
+</body>
+</html>

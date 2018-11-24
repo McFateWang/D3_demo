@@ -1,0 +1,1560 @@
+{
+	"nodes" :
+	[{
+	"j_id": 1,
+	"j_label": "计算机",
+	"j_label2": "理论方法",
+	"name": "Information Fusion"
+}, {
+	"j_id": 2,
+	"j_label": "工程技术",
+	"j_label2": "材料科学：综合",
+	"name": "Nature Nanotechnology"
+}, {
+	"j_id": 3,
+	"j_label": "生物",
+	"j_label2": "细胞生物学",
+	"name": "Science Translational Medicine"
+}, {
+	"j_id": 4,
+	"j_label": "数学",
+	"j_label2": "理论数学",
+	"name": "Publications Mathematiques De L Ihes"
+}, {
+	"j_id": 5,
+	"j_label": "数学",
+	"j_label2": "数学跨学科应用",
+	"name": "Communications In Nonlinear Science And Numerical Simulation"
+}, {
+	"j_id": 6,
+	"j_label": "工程技术",
+	"j_label2": "数学跨学科应用",
+	"name": "Computer Methods In Applied Mechanics And Engineering"
+}, {
+	"j_id": 7,
+	"j_label": "计算机",
+	"j_label2": "理论方法",
+	"name": "Ieee Transactions On Neural Networks And Learning Systems"
+}, {
+	"j_id": 8,
+	"j_label": "生物",
+	"j_label2": "遗传学",
+	"name": "Genome Research"
+}, {
+	"j_id": 9,
+	"j_label": "数学",
+	"j_label2": "理论数学",
+	"name": "Annals Of Mathematics"
+}, {
+	"j_id": 10,
+	"j_label": "工程技术",
+	"j_label2": "材料科学：综合",
+	"name": "Nano Energy"
+}, {
+	"j_id": 11,
+	"j_label": "生物",
+	"j_label2": "数学与计算生物学",
+	"name": "Bioinformatics"
+}, {
+	"j_id": 12,
+	"j_label": "生物",
+	"j_label2": "生化与分子生物学",
+	"name": "Annual Review Of Biochemistry"
+}, {
+	"j_id": 13,
+	"j_label": "生物",
+	"j_label2": "微生物学",
+	"name": "Nature Reviews Microbiology"
+}, {
+	"j_id": 14,
+	"j_label": "工程技术",
+	"j_label2": "材料科学：综合",
+	"name": "Materials Today"
+}, {
+	"j_id": 15,
+	"j_label": "工程技术",
+	"j_label2": "数学跨学科应用",
+	"name": "Archives Of Computational Methods In Engineering"
+}, {
+	"j_id": 16,
+	"j_label": "工程技术",
+	"j_label2": "生物工程与应用微生物",
+	"name": "Biotechnology Advances"
+}, {
+	"j_id": 17,
+	"j_label": "数学",
+	"j_label2": "理论数学",
+	"name": "Nonlinear Analysis-Theory Methods & Applications"
+}, {
+	"j_id": 18,
+	"j_label": "数学",
+	"j_label2": "应用数学",
+	"name": "Applied And Computational Harmonic Analysis"
+}, {
+	"j_id": 19,
+	"j_label": "数学",
+	"j_label2": "理论数学",
+	"name": "Bulletin Of The American Mathematical Society"
+}, {
+	"j_id": 20,
+	"j_label": "生物",
+	"j_label2": "遗传学",
+	"name": "Trends In Ecology & Evolution"
+}, {
+	"j_id": 21,
+	"j_label": "数学",
+	"j_label2": "理论数学",
+	"name": "Journal Of The European Mathematical Society"
+}, {
+	"j_id": 22,
+	"j_label": "工程技术",
+	"j_label2": "材料科学：综合",
+	"name": "Progress In Materials Science"
+}, {
+	"j_id": 23,
+	"j_label": "生物",
+	"j_label2": "数学与计算生物学",
+	"name": "Briefings In Bioinformatics"
+}, {
+	"j_id": 24,
+	"j_label": "生物",
+	"j_label2": "遗传学",
+	"name": "Annual Review Of Genetics"
+}, {
+	"j_id": 25,
+	"j_label": "生物",
+	"j_label2": "昆虫学",
+	"name": "Annual Review Of Entomology"
+}, {
+	"j_id": 26,
+	"j_label": "生物",
+	"j_label2": "细胞生物学",
+	"name": "Annual Review Of Cell And Developmental Biology"
+}, {
+	"j_id": 27,
+	"j_label": "数学",
+	"j_label2": "理论数学",
+	"name": "Inventiones Mathematicae"
+}, {
+	"j_id": 28,
+	"j_label": "工程技术",
+	"j_label2": "材料科学：综合",
+	"name": "Advanced Materials"
+}, {
+	"j_id": 29,
+	"j_label": "计算机",
+	"j_label2": "软件工程",
+	"name": "Communications Of The Acm"
+}, {
+	"j_id": 30,
+	"j_label": "数学",
+	"j_label2": "理论数学",
+	"name": "Memoirs Of The American Mathematical Society"
+}, {
+	"j_id": 31,
+	"j_label": "计算机",
+	"j_label2": "人工智能",
+	"name": "Integrated Computer-Aided Engineering"
+}, {
+	"j_id": 32,
+	"j_label": "生物",
+	"j_label2": "细胞生物学",
+	"name": "Cell"
+}, {
+	"j_id": 33,
+	"j_label": "数学",
+	"j_label2": "理论数学",
+	"name": "Acta Mathematica"
+}, {
+	"j_id": 34,
+	"j_label": "数学",
+	"j_label2": "应用数学",
+	"name": "Nonlinear Analysis-Real World Applications"
+}, {
+	"j_id": 35,
+	"j_label": "数学",
+	"j_label2": "理论数学",
+	"name": "Acta Numerica"
+}, {
+	"j_id": 36,
+	"j_label": "生物",
+	"j_label2": "生化研究方法",
+	"name": "Nature Methods"
+}, {
+	"j_id": 37,
+	"j_label": "生物",
+	"j_label2": "细胞生物学",
+	"name": "Cell Stem Cell"
+}, {
+	"j_id": 38,
+	"j_label": "数学",
+	"j_label2": "理论数学",
+	"name": "Journal Of The American Mathematical Society"
+}, {
+	"j_id": 39,
+	"j_label": "计算机",
+	"j_label2": "人工智能",
+	"name": "Ieee Transactions On Fuzzy Systems"
+}, {
+	"j_id": 40,
+	"j_label": "数学",
+	"j_label2": "应用数学",
+	"name": "Communications On Pure And Applied Mathematics"
+}, {
+	"j_id": 41,
+	"j_label": "工程技术",
+	"j_label2": "材料科学：综合",
+	"name": "Advanced Functional Materials"
+}, {
+	"j_id": 42,
+	"j_label": "生物",
+	"j_label2": "遗传学",
+	"name": "Nature Genetics"
+}, {
+	"j_id": 43,
+	"j_label": "工程技术",
+	"j_label2": "材料科学：综合",
+	"name": "Nano Letters"
+}, {
+	"j_id": 44,
+	"j_label": "工程技术",
+	"j_label2": "材料科学：综合",
+	"name": "Acs Nano"
+}, {
+	"j_id": 45,
+	"j_label": "计算机",
+	"j_label2": "信息系统",
+	"name": "Ieee Wireless Communications"
+}, {
+	"j_id": 46,
+	"j_label": "工程技术",
+	"j_label2": "生物工程与应用微生物",
+	"name": "Trends In Biotechnology"
+}, {
+	"j_id": 47,
+	"j_label": "数学",
+	"j_label2": "应用数学",
+	"name": "Foundations Of Computational Mathematics"
+}, {
+	"j_id": 48,
+	"j_label": "生物",
+	"j_label2": "细胞生物学",
+	"name": "Nature Cell Biology"
+}, {
+	"j_id": 49,
+	"j_label": "生物",
+	"j_label2": "细胞生物学",
+	"name": "Molecular Cell"
+}, {
+	"j_id": 50,
+	"j_label": "计算机",
+	"j_label2": "理论方法",
+	"name": "Acm Computing Surveys"
+}, {
+	"j_id": 51,
+	"j_label": "数学",
+	"j_label2": "应用数学",
+	"name": "Siam Review"
+}, {
+	"j_id": 52,
+	"j_label": "工程技术",
+	"j_label2": "材料科学：综合",
+	"name": "Npg Asia Materials"
+}, {
+	"j_id": 53,
+	"j_label": "计算机",
+	"j_label2": "软件工程",
+	"name": "Acm Transactions On Mathematical Software"
+}, {
+	"j_id": 54,
+	"j_label": "计算机",
+	"j_label2": "信息系统",
+	"name": "Journal Of Chemical Information And Modeling"
+}, {
+	"j_id": 55,
+	"j_label": "数学",
+	"j_label2": "理论数学",
+	"name": "Duke Mathematical Journal"
+}, {
+	"j_id": 56,
+	"j_label": "工程技术",
+	"j_label2": "工程：生物医学",
+	"name": "Annual Review Of Biomedical Engineering"
+}, {
+	"j_id": 57,
+	"j_label": "生物",
+	"j_label2": "细胞生物学",
+	"name": "Cell Metabolism"
+}, {
+	"j_id": 58,
+	"j_label": "计算机",
+	"j_label2": "信息系统",
+	"name": "Journal Of Cheminformatics"
+}, {
+	"j_id": 59,
+	"j_label": "工程技术",
+	"j_label2": "材料科学：综合",
+	"name": "Nano Today"
+}, {
+	"j_id": 60,
+	"j_label": "计算机",
+	"j_label2": "软件工程",
+	"name": "Acm Transactions On Graphics"
+}, {
+	"j_id": 61,
+	"j_label": "生物",
+	"j_label2": "微生物学",
+	"name": "Microbiology And Molecular Biology Reviews"
+}, {
+	"j_id": 62,
+	"j_label": "工程技术",
+	"j_label2": "材料科学：综合",
+	"name": "Materials Science & Engineering R-Reports"
+}, {
+	"j_id": 63,
+	"j_label": "生物",
+	"j_label2": "细胞生物学",
+	"name": "Nature Reviews Molecular Cell Biology"
+}, {
+	"j_id": 64,
+	"j_label": "计算机",
+	"j_label2": "人工智能",
+	"name": "International Journal Of Neural Systems"
+}, {
+	"j_id": 65,
+	"j_label": "计算机",
+	"j_label2": "人工智能",
+	"name": "Ieee Transactions On Pattern Analysis And Machine Intelligence"
+}, {
+	"j_id": 66,
+	"j_label": "数学",
+	"j_label2": "理论数学",
+	"name": "Journal Of Differential Equations"
+}, {
+	"j_id": 67,
+	"j_label": "数学",
+	"j_label2": "应用数学",
+	"name": "Siam Journal On Optimization"
+}],
+"edges" :
+[
+    {
+        "source":1,
+        "target":29,
+        "j_edge_id":1,
+        "value":1
+    },
+    {
+        "source":1,
+        "target":50,
+        "j_edge_id":2,
+        "value":1
+    },
+    {
+        "source":1,
+        "target":65,
+        "j_edge_id":3,
+        "value":3
+    },
+    {
+        "source":2,
+        "target":36,
+        "j_edge_id":5,
+        "value":1
+    },
+    {
+        "source":2,
+        "target":46,
+        "j_edge_id":6,
+        "value":1
+    },
+    {
+        "source":3,
+        "target":25,
+        "j_edge_id":8,
+        "value":1
+    },
+    {
+        "source":3,
+        "target":32,
+        "j_edge_id":9,
+        "value":1
+    },
+    {
+        "source":3,
+        "target":37,
+        "j_edge_id":10,
+        "value":2
+    },
+    {
+        "source":3,
+        "target":42,
+        "j_edge_id":11,
+        "value":2
+    },
+    {
+        "source":3,
+        "target":63,
+        "j_edge_id":12,
+        "value":1
+    },
+    {
+        "source":5,
+        "target":7,
+        "j_edge_id":14,
+        "value":2
+    },
+    {
+        "source":5,
+        "target":17,
+        "j_edge_id":15,
+        "value":4
+    },
+    {
+        "source":5,
+        "target":34,
+        "j_edge_id":16,
+        "value":2
+    },
+    {
+        "source":6,
+        "target":15,
+        "j_edge_id":18,
+        "value":1
+    },
+    {
+        "source":6,
+        "target":29,
+        "j_edge_id":19,
+        "value":1
+    },
+    {
+        "source":6,
+        "target":51,
+        "j_edge_id":20,
+        "value":2
+    },
+    {
+        "source":6,
+        "target":67,
+        "j_edge_id":21,
+        "value":1
+    },
+    {
+        "source":9,
+        "target":4,
+        "j_edge_id":24,
+        "value":10
+    },
+    {
+        "source":9,
+        "target":19,
+        "j_edge_id":26,
+        "value":1
+    },
+    {
+        "source":9,
+        "target":21,
+        "j_edge_id":27,
+        "value":2
+    },
+    {
+        "source":9,
+        "target":27,
+        "j_edge_id":28,
+        "value":17
+    },
+    {
+        "source":9,
+        "target":33,
+        "j_edge_id":29,
+        "value":3
+    },
+    {
+        "source":9,
+        "target":38,
+        "j_edge_id":30,
+        "value":6
+    },
+    {
+        "source":9,
+        "target":40,
+        "j_edge_id":31,
+        "value":4
+    },
+    {
+        "source":9,
+        "target":51,
+        "j_edge_id":32,
+        "value":1
+    },
+    {
+        "source":9,
+        "target":55,
+        "j_edge_id":33,
+        "value":14
+    },
+    {
+        "source":10,
+        "target":2,
+        "j_edge_id":34,
+        "value":5
+    },
+    {
+        "source":10,
+        "target":16,
+        "j_edge_id":35,
+        "value":1
+    },
+    {
+        "source":10,
+        "target":28,
+        "j_edge_id":36,
+        "value":4
+    },
+    {
+        "source":10,
+        "target":41,
+        "j_edge_id":37,
+        "value":1
+    },
+    {
+        "source":10,
+        "target":43,
+        "j_edge_id":38,
+        "value":6
+    },
+    {
+        "source":10,
+        "target":44,
+        "j_edge_id":39,
+        "value":2
+    },
+    {
+        "source":11,
+        "target":8,
+        "j_edge_id":40,
+        "value":7
+    },
+    {
+        "source":11,
+        "target":13,
+        "j_edge_id":42,
+        "value":1
+    },
+    {
+        "source":11,
+        "target":23,
+        "j_edge_id":43,
+        "value":2
+    },
+    {
+        "source":11,
+        "target":32,
+        "j_edge_id":44,
+        "value":4
+    },
+    {
+        "source":11,
+        "target":42,
+        "j_edge_id":45,
+        "value":6
+    },
+    {
+        "source":11,
+        "target":46,
+        "j_edge_id":46,
+        "value":1
+    },
+    {
+        "source":11,
+        "target":49,
+        "j_edge_id":47,
+        "value":1
+    },
+    {
+        "source":11,
+        "target":54,
+        "j_edge_id":48,
+        "value":4
+    },
+    {
+        "source":13,
+        "target":42,
+        "j_edge_id":49,
+        "value":1
+    },
+    {
+        "source":14,
+        "target":16,
+        "j_edge_id":51,
+        "value":2
+    },
+    {
+        "source":14,
+        "target":28,
+        "j_edge_id":52,
+        "value":4
+    },
+    {
+        "source":14,
+        "target":41,
+        "j_edge_id":53,
+        "value":1
+    },
+    {
+        "source":15,
+        "target":6,
+        "j_edge_id":54,
+        "value":43
+    },
+    {
+        "source":15,
+        "target":35,
+        "j_edge_id":55,
+        "value":2
+    },
+    {
+        "source":15,
+        "target":47,
+        "j_edge_id":56,
+        "value":1
+    },
+    {
+        "source":15,
+        "target":60,
+        "j_edge_id":57,
+        "value":1
+    },
+    {
+        "source":17,
+        "target":9,
+        "j_edge_id":58,
+        "value":2
+    },
+    {
+        "source":17,
+        "target":19,
+        "j_edge_id":60,
+        "value":4
+    },
+    {
+        "source":17,
+        "target":21,
+        "j_edge_id":61,
+        "value":1
+    },
+    {
+        "source":17,
+        "target":27,
+        "j_edge_id":62,
+        "value":7
+    },
+    {
+        "source":17,
+        "target":30,
+        "j_edge_id":63,
+        "value":1
+    },
+    {
+        "source":17,
+        "target":33,
+        "j_edge_id":64,
+        "value":5
+    },
+    {
+        "source":17,
+        "target":38,
+        "j_edge_id":65,
+        "value":1
+    },
+    {
+        "source":17,
+        "target":40,
+        "j_edge_id":66,
+        "value":14
+    },
+    {
+        "source":17,
+        "target":47,
+        "j_edge_id":67,
+        "value":1
+    },
+    {
+        "source":17,
+        "target":55,
+        "j_edge_id":68,
+        "value":8
+    },
+    {
+        "source":17,
+        "target":66,
+        "j_edge_id":69,
+        "value":21
+    },
+    {
+        "source":17,
+        "target":67,
+        "j_edge_id":70,
+        "value":2
+    },
+    {
+        "source":18,
+        "target":33,
+        "j_edge_id":72,
+        "value":2
+    },
+    {
+        "source":18,
+        "target":40,
+        "j_edge_id":73,
+        "value":2
+    },
+    {
+        "source":18,
+        "target":51,
+        "j_edge_id":74,
+        "value":1
+    },
+    {
+        "source":22,
+        "target":2,
+        "j_edge_id":75,
+        "value":1
+    },
+    {
+        "source":22,
+        "target":8,
+        "j_edge_id":76,
+        "value":1
+    },
+    {
+        "source":22,
+        "target":12,
+        "j_edge_id":77,
+        "value":2
+    },
+    {
+        "source":22,
+        "target":24,
+        "j_edge_id":78,
+        "value":1
+    },
+    {
+        "source":22,
+        "target":43,
+        "j_edge_id":79,
+        "value":1
+    },
+    {
+        "source":22,
+        "target":48,
+        "j_edge_id":80,
+        "value":1
+    },
+    {
+        "source":23,
+        "target":8,
+        "j_edge_id":81,
+        "value":1
+    },
+    {
+        "source":27,
+        "target":9,
+        "j_edge_id":83,
+        "value":8
+    },
+    {
+        "source":27,
+        "target":33,
+        "j_edge_id":85,
+        "value":1
+    },
+    {
+        "source":27,
+        "target":38,
+        "j_edge_id":86,
+        "value":1
+    },
+    {
+        "source":27,
+        "target":40,
+        "j_edge_id":87,
+        "value":1
+    },
+    {
+        "source":27,
+        "target":55,
+        "j_edge_id":88,
+        "value":1
+    },
+    {
+        "source":27,
+        "target":66,
+        "j_edge_id":89,
+        "value":1
+    },
+    {
+        "source":29,
+        "target":50,
+        "j_edge_id":91,
+        "value":1
+    },
+    {
+        "source":31,
+        "target":7,
+        "j_edge_id":92,
+        "value":2
+    },
+    {
+        "source":31,
+        "target":18,
+        "j_edge_id":93,
+        "value":1
+    },
+    {
+        "source":31,
+        "target":29,
+        "j_edge_id":94,
+        "value":7
+    },
+    {
+        "source":31,
+        "target":39,
+        "j_edge_id":96,
+        "value":1
+    },
+    {
+        "source":31,
+        "target":51,
+        "j_edge_id":97,
+        "value":4
+    },
+    {
+        "source":31,
+        "target":53,
+        "j_edge_id":98,
+        "value":1
+    },
+    {
+        "source":31,
+        "target":65,
+        "j_edge_id":99,
+        "value":8
+    },
+    {
+        "source":32,
+        "target":8,
+        "j_edge_id":100,
+        "value":8
+    },
+    {
+        "source":32,
+        "target":11,
+        "j_edge_id":101,
+        "value":3
+    },
+    {
+        "source":32,
+        "target":12,
+        "j_edge_id":102,
+        "value":38
+    },
+    {
+        "source":32,
+        "target":13,
+        "j_edge_id":103,
+        "value":1
+    },
+    {
+        "source":32,
+        "target":20,
+        "j_edge_id":104,
+        "value":1
+    },
+    {
+        "source":32,
+        "target":24,
+        "j_edge_id":105,
+        "value":13
+    },
+    {
+        "source":32,
+        "target":26,
+        "j_edge_id":106,
+        "value":8
+    },
+    {
+        "source":32,
+        "target":42,
+        "j_edge_id":108,
+        "value":112
+    },
+    {
+        "source":32,
+        "target":46,
+        "j_edge_id":109,
+        "value":1
+    },
+    {
+        "source":32,
+        "target":48,
+        "j_edge_id":110,
+        "value":33
+    },
+    {
+        "source":32,
+        "target":49,
+        "j_edge_id":111,
+        "value":139
+    },
+    {
+        "source":32,
+        "target":61,
+        "j_edge_id":112,
+        "value":9
+    },
+    {
+        "source":32,
+        "target":63,
+        "j_edge_id":113,
+        "value":15
+    },
+    {
+        "source":33,
+        "target":9,
+        "j_edge_id":114,
+        "value":3
+    },
+    {
+        "source":33,
+        "target":55,
+        "j_edge_id":115,
+        "value":1
+    },
+    {
+        "source":34,
+        "target":4,
+        "j_edge_id":116,
+        "value":1
+    },
+    {
+        "source":34,
+        "target":17,
+        "j_edge_id":117,
+        "value":5
+    },
+    {
+        "source":34,
+        "target":30,
+        "j_edge_id":118,
+        "value":1
+    },
+    {
+        "source":34,
+        "target":33,
+        "j_edge_id":119,
+        "value":3
+    },
+    {
+        "source":34,
+        "target":40,
+        "j_edge_id":121,
+        "value":5
+    },
+    {
+        "source":34,
+        "target":51,
+        "j_edge_id":122,
+        "value":1
+    },
+    {
+        "source":34,
+        "target":66,
+        "j_edge_id":123,
+        "value":10
+    },
+    {
+        "source":36,
+        "target":8,
+        "j_edge_id":124,
+        "value":8
+    },
+    {
+        "source":36,
+        "target":11,
+        "j_edge_id":125,
+        "value":2
+    },
+    {
+        "source":36,
+        "target":32,
+        "j_edge_id":126,
+        "value":4
+    },
+    {
+        "source":36,
+        "target":49,
+        "j_edge_id":128,
+        "value":1
+    },
+    {
+        "source":36,
+        "target":63,
+        "j_edge_id":129,
+        "value":1
+    },
+    {
+        "source":38,
+        "target":9,
+        "j_edge_id":130,
+        "value":1
+    },
+    {
+        "source":38,
+        "target":21,
+        "j_edge_id":131,
+        "value":2
+    },
+    {
+        "source":38,
+        "target":27,
+        "j_edge_id":132,
+        "value":1
+    },
+    {
+        "source":42,
+        "target":3,
+        "j_edge_id":134,
+        "value":1
+    },
+    {
+        "source":42,
+        "target":8,
+        "j_edge_id":135,
+        "value":25
+    },
+    {
+        "source":42,
+        "target":11,
+        "j_edge_id":136,
+        "value":25
+    },
+    {
+        "source":42,
+        "target":23,
+        "j_edge_id":137,
+        "value":1
+    },
+    {
+        "source":42,
+        "target":26,
+        "j_edge_id":138,
+        "value":1
+    },
+    {
+        "source":42,
+        "target":32,
+        "j_edge_id":139,
+        "value":133
+    },
+    {
+        "source":42,
+        "target":36,
+        "j_edge_id":140,
+        "value":7
+    },
+    {
+        "source":42,
+        "target":37,
+        "j_edge_id":141,
+        "value":3
+    },
+    {
+        "source":42,
+        "target":48,
+        "j_edge_id":143,
+        "value":2
+    },
+    {
+        "source":42,
+        "target":49,
+        "j_edge_id":144,
+        "value":3
+    },
+    {
+        "source":42,
+        "target":57,
+        "j_edge_id":145,
+        "value":2
+    },
+    {
+        "source":42,
+        "target":63,
+        "j_edge_id":146,
+        "value":1
+    },
+    {
+        "source":43,
+        "target":2,
+        "j_edge_id":147,
+        "value":1
+    },
+    {
+        "source":44,
+        "target":43,
+        "j_edge_id":148,
+        "value":3
+    },
+    {
+        "source":45,
+        "target":46,
+        "j_edge_id":150,
+        "value":1
+    },
+    {
+        "source":46,
+        "target":8,
+        "j_edge_id":151,
+        "value":1
+    },
+    {
+        "source":46,
+        "target":32,
+        "j_edge_id":152,
+        "value":1
+    },
+    {
+        "source":46,
+        "target":42,
+        "j_edge_id":153,
+        "value":2
+    },
+    {
+        "source":47,
+        "target":9,
+        "j_edge_id":155,
+        "value":2
+    },
+    {
+        "source":47,
+        "target":30,
+        "j_edge_id":156,
+        "value":2
+    },
+    {
+        "source":47,
+        "target":51,
+        "j_edge_id":158,
+        "value":1
+    },
+    {
+        "source":47,
+        "target":55,
+        "j_edge_id":159,
+        "value":1
+    },
+    {
+        "source":47,
+        "target":66,
+        "j_edge_id":160,
+        "value":1
+    },
+    {
+        "source":47,
+        "target":67,
+        "j_edge_id":161,
+        "value":2
+    },
+    {
+        "source":48,
+        "target":8,
+        "j_edge_id":162,
+        "value":1
+    },
+    {
+        "source":48,
+        "target":26,
+        "j_edge_id":163,
+        "value":1
+    },
+    {
+        "source":48,
+        "target":32,
+        "j_edge_id":164,
+        "value":11
+    },
+    {
+        "source":48,
+        "target":36,
+        "j_edge_id":165,
+        "value":1
+    },
+    {
+        "source":48,
+        "target":49,
+        "j_edge_id":167,
+        "value":2
+    },
+    {
+        "source":48,
+        "target":63,
+        "j_edge_id":168,
+        "value":1
+    },
+    {
+        "source":49,
+        "target":8,
+        "j_edge_id":169,
+        "value":3
+    },
+    {
+        "source":49,
+        "target":12,
+        "j_edge_id":170,
+        "value":12
+    },
+    {
+        "source":49,
+        "target":24,
+        "j_edge_id":171,
+        "value":5
+    },
+    {
+        "source":49,
+        "target":26,
+        "j_edge_id":172,
+        "value":2
+    },
+    {
+        "source":49,
+        "target":32,
+        "j_edge_id":173,
+        "value":265
+    },
+    {
+        "source":49,
+        "target":42,
+        "j_edge_id":174,
+        "value":35
+    },
+    {
+        "source":49,
+        "target":48,
+        "j_edge_id":175,
+        "value":7
+    },
+    {
+        "source":49,
+        "target":61,
+        "j_edge_id":177,
+        "value":4
+    },
+    {
+        "source":49,
+        "target":63,
+        "j_edge_id":178,
+        "value":5
+    },
+    {
+        "source":50,
+        "target":29,
+        "j_edge_id":179,
+        "value":2
+    },
+    {
+        "source":50,
+        "target":58,
+        "j_edge_id":181,
+        "value":1
+    },
+    {
+        "source":52,
+        "target":2,
+        "j_edge_id":182,
+        "value":2
+    },
+    {
+        "source":52,
+        "target":3,
+        "j_edge_id":183,
+        "value":1
+    },
+    {
+        "source":52,
+        "target":8,
+        "j_edge_id":184,
+        "value":1
+    },
+    {
+        "source":52,
+        "target":12,
+        "j_edge_id":185,
+        "value":1
+    },
+    {
+        "source":52,
+        "target":13,
+        "j_edge_id":186,
+        "value":1
+    },
+    {
+        "source":52,
+        "target":16,
+        "j_edge_id":187,
+        "value":2
+    },
+    {
+        "source":52,
+        "target":26,
+        "j_edge_id":188,
+        "value":2
+    },
+    {
+        "source":52,
+        "target":28,
+        "j_edge_id":189,
+        "value":8
+    },
+    {
+        "source":52,
+        "target":32,
+        "j_edge_id":190,
+        "value":9
+    },
+    {
+        "source":52,
+        "target":36,
+        "j_edge_id":191,
+        "value":3
+    },
+    {
+        "source":52,
+        "target":37,
+        "j_edge_id":192,
+        "value":1
+    },
+    {
+        "source":52,
+        "target":41,
+        "j_edge_id":193,
+        "value":4
+    },
+    {
+        "source":52,
+        "target":42,
+        "j_edge_id":194,
+        "value":6
+    },
+    {
+        "source":52,
+        "target":43,
+        "j_edge_id":195,
+        "value":1
+    },
+    {
+        "source":52,
+        "target":44,
+        "j_edge_id":196,
+        "value":1
+    },
+    {
+        "source":52,
+        "target":46,
+        "j_edge_id":197,
+        "value":14
+    },
+    {
+        "source":52,
+        "target":56,
+        "j_edge_id":199,
+        "value":2
+    },
+    {
+        "source":52,
+        "target":59,
+        "j_edge_id":200,
+        "value":1
+    },
+    {
+        "source":52,
+        "target":63,
+        "j_edge_id":201,
+        "value":1
+    },
+    {
+        "source":57,
+        "target":32,
+        "j_edge_id":203,
+        "value":7
+    },
+    {
+        "source":58,
+        "target":3,
+        "j_edge_id":205,
+        "value":1
+    },
+    {
+        "source":58,
+        "target":54,
+        "j_edge_id":206,
+        "value":3
+    },
+    {
+        "source":58,
+        "target":63,
+        "j_edge_id":207,
+        "value":1
+    },
+    {
+        "source":59,
+        "target":14,
+        "j_edge_id":208,
+        "value":1
+    },
+    {
+        "source":59,
+        "target":41,
+        "j_edge_id":209,
+        "value":1
+    },
+    {
+        "source":59,
+        "target":43,
+        "j_edge_id":210,
+        "value":2
+    },
+    {
+        "source":59,
+        "target":48,
+        "j_edge_id":211,
+        "value":2
+    },
+    {
+        "source":59,
+        "target":52,
+        "j_edge_id":212,
+        "value":1
+    },
+    {
+        "source":62,
+        "target":28,
+        "j_edge_id":214,
+        "value":13
+    },
+    {
+        "source":62,
+        "target":41,
+        "j_edge_id":215,
+        "value":4
+    },
+    {
+        "source":62,
+        "target":43,
+        "j_edge_id":216,
+        "value":1
+    },
+    {
+        "source":62,
+        "target":44,
+        "j_edge_id":217,
+        "value":1
+    },
+    {
+        "source":62,
+        "target":46,
+        "j_edge_id":218,
+        "value":2
+    },
+    {
+        "source":62,
+        "target":52,
+        "j_edge_id":219,
+        "value":1
+    },
+    {
+        "source":62,
+        "target":59,
+        "j_edge_id":220,
+        "value":1
+    },
+    {
+        "source":63,
+        "target":32,
+        "j_edge_id":221,
+        "value":5
+    },
+    {
+        "source":63,
+        "target":42,
+        "j_edge_id":222,
+        "value":1
+    },
+    {
+        "source":63,
+        "target":48,
+        "j_edge_id":223,
+        "value":1
+    },
+    {
+        "source":64,
+        "target":29,
+        "j_edge_id":225,
+        "value":1
+    },
+    {
+        "source":66,
+        "target":9,
+        "j_edge_id":227,
+        "value":5
+    },
+    {
+        "source":66,
+        "target":17,
+        "j_edge_id":228,
+        "value":23
+    },
+    {
+        "source":66,
+        "target":19,
+        "j_edge_id":229,
+        "value":1
+    },
+    {
+        "source":66,
+        "target":27,
+        "j_edge_id":230,
+        "value":7
+    },
+    {
+        "source":66,
+        "target":30,
+        "j_edge_id":231,
+        "value":2
+    },
+    {
+        "source":66,
+        "target":33,
+        "j_edge_id":232,
+        "value":1
+    },
+    {
+        "source":66,
+        "target":38,
+        "j_edge_id":233,
+        "value":1
+    },
+    {
+        "source":66,
+        "target":40,
+        "j_edge_id":234,
+        "value":16
+    },
+    {
+        "source":66,
+        "target":55,
+        "j_edge_id":235,
+        "value":10
+    }
+]
+}
